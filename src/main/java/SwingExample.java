@@ -1,5 +1,7 @@
 import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
+import java.io.File;
 
 /**
  * Created by Yong YAO  on 2017/6/8.
@@ -15,7 +17,18 @@ public class SwingExample {
         jButton.setText("click");
         jButton.setBackground(Color.blue);
 
+        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+
+        int returnValue = jfc.showOpenDialog(null);
+        // int returnValue = jfc.showSaveDialog(null);
+
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = jfc.getSelectedFile();
+            System.out.println(selectedFile.getAbsolutePath());
+        }
+
         jFrame.add(jButton);
+        jFrame.add(jfc);
         jFrame.setVisible(true);
 
     }

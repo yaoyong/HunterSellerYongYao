@@ -13,6 +13,8 @@ public class GroupExample {
         JLabel clickMe = new JLabel("Click Here");
         JButton button = new JButton("This Button");
 
+
+
         groupLayout.setHorizontalGroup(
                 groupLayout.createSequentialGroup()
                         .addComponent(clickMe)
