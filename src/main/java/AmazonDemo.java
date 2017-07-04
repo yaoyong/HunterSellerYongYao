@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * Created by zhenqingzhao on 6/6/17.
+ * Created by JoshuaYao on 6/6/17.
  */
 public class AmazonDemo {
     String url;
